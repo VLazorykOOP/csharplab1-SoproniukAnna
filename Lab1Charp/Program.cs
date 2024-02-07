@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System.Security.Cryptography.X509Certificates;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -6,11 +8,14 @@
         //Task1();
         //Task2();
         //Task3();
-        Task4();
-        Console.WriteLine("          Task 5");
-        Console.Write("Input integer number a: ");
-        int a = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine($"Number {a} in a cube: {Task5(a)}");
+        //Task4();
+
+        //Console.WriteLine("          Task 5");
+        //Console.Write("Input integer number a: ");
+        //int a = Convert.ToInt32(Console.ReadLine());
+        //Console.WriteLine($"Number {a} in a cube: {Task5(a)}");
+
+        Task6();
     }
 
     static void Task1()
@@ -21,8 +26,8 @@
         double a = Convert.ToDouble(Console.ReadLine());
         double radius = a / (2 * Math.Sqrt(3));
         Console.WriteLine();
-        Console.WriteLine("Side a: " + a);
-        Console.Write("Radius: " + radius);
+        Console.WriteLine($"Side a: {a}");
+        Console.Write($"Radius: {radius}");
         Console.WriteLine();
     }
 
@@ -37,9 +42,9 @@
         double c = Convert.ToDouble(Console.ReadLine());
 
         if (a + b > c && a + c > b && b + c > a)
-            Console.WriteLine("Triangle exists");
+            Console.WriteLine($"Triangle with sides {a}, {b}, {c} exists");
         else
-            Console.WriteLine("Triangle not exists");
+            Console.WriteLine($"Triangle with sides {a}, {b}, {c} not exists");
         Console.WriteLine();
     }
 
@@ -90,7 +95,8 @@
                 Console.WriteLine("There is no such sign");
                 return;
         }
-        Console.WriteLine("Max Speed: " + maxSpeed);
+
+        Console.WriteLine($"Max speed on the sign {sign}: {maxSpeed}");
         Console.WriteLine();
 
     }
@@ -98,6 +104,29 @@
     static int Task5(int a)
     {
         return a * a * a;
+    }
+
+    static void Task6()
+    {
+        Console.WriteLine("          Task 6");
+        double x = 0;
+        double y = 0;
+        do
+        {
+            Console.WriteLine("Input number x and y which not 0");
+            Console.Write("Input number x: ");
+            x = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Input number y: ");
+            y = Convert.ToDouble(Console.ReadLine());
+        } while (x == 0 || y == 0);
+
+        double first = 1 / (x * y);
+        double second = 1 / (x * x + 1);
+        double third = first + second;
+        double fourth = x + y;
+        double result = third * fourth;
+
+        Console.WriteLine($"Result: {result}");
     }
 }
 
