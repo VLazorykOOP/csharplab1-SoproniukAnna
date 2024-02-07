@@ -47,8 +47,42 @@ static void task3()
     Console.WriteLine();
 }
 
+static void task4()
+{
+    Console.WriteLine();
+    Console.Write("Input the transport sign(а, в, м, с, п): ");
+    char sign = char.ToLower(Console.ReadKey().KeyChar);
+    Console.WriteLine();
+
+    int maxSpeed = 0;
+
+    switch (sign)
+    {
+        case 'a':
+            maxSpeed = 120;
+            break;
+        case 'в':
+            maxSpeed = 30;
+            break;
+        case 'м':
+            maxSpeed = 120;
+            break;
+        case 'с':
+            maxSpeed = 900;
+            break;
+        case 'п':
+            maxSpeed = 200;
+            break;
+        default:
+            Console.WriteLine("There is no such sign");
+            return;
+    }
+    Console.WriteLine("Max Speed: " + maxSpeed);
+}
+
 Console.WriteLine("          Lab 1");
 //task1();
 //task2();
-task3();
+//task3();
+task4();
 // continue ...
