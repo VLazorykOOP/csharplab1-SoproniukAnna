@@ -5,15 +5,16 @@ internal class Program
     private static void Main(string[] args)
     {
         Console.WriteLine("          Lab 1");
-        //Task1();
-        //Task2();
-        //Task3();
-        //Task4();
+        Console.WriteLine();
+        Task1();
+        Task2();
+        Task3();
+        Task4();
 
-        //Console.WriteLine("          Task 5");
-        //Console.Write("Input integer number a: ");
-        //int a = Convert.ToInt32(Console.ReadLine());
-        //Console.WriteLine($"Number {a} in a cube: {Task5(a)}");
+        Console.WriteLine("          Task 5");
+        Console.Write("Input integer number a: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"Number {a} in a cube: {Task5(a)}");
 
         Task6();
     }
