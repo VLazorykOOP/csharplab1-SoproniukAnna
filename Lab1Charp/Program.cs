@@ -6,7 +6,7 @@
 
     Console.Write("Input side a: ");
     double a = Convert.ToDouble(Console.ReadLine());
-    double radius = (a / (2 * Math.Sqrt(3)));
+    double radius = a / (2 * Math.Sqrt(3));
     Console.WriteLine();
     Console.WriteLine("Side a: " + a);
     Console.Write("Radius: " + radius);
@@ -29,7 +29,26 @@ static void task2()
         Console.WriteLine("Triangle not exists");
     Console.WriteLine();
 }
+
+static void task3()
+{
+    Console.WriteLine("          Task 3");
+    Console.Write("Input coordinate x: ");
+    double x = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Input coordinate y: ");
+    double y = Convert.ToDouble(Console.ReadLine());
+
+    if (x > -15 && x < 0 && y > -15 && y < 0)
+        Console.Write("No");
+    else if (x < -15 || x > 0 || y < -15 || y > 0)
+        Console.Write("Yes");
+    else
+        Console.Write("On the edge");
+    Console.WriteLine();
+}
+
 Console.WriteLine("          Lab 1");
 //task1();
-task2();
+//task2();
+task3();
 // continue ...
