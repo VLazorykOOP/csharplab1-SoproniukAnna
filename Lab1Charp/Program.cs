@@ -6,7 +6,7 @@ internal class Program
     {
         Console.WriteLine("          Lab 1");
         Console.WriteLine();
-        /*Task1();
+        Task1();
         Task2();
         Task3();
         Task4();
@@ -16,7 +16,7 @@ internal class Program
         int a = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine($"Number {a} in a cube: {Task5(a)}");
         Console.WriteLine();
-        */
+        
         Task6();
     }
 
