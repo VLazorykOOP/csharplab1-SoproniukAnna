@@ -6,7 +6,7 @@ internal class Program
     {
         Console.WriteLine("          Lab 1");
         Console.WriteLine();
-        Task1();
+        /*Task1();
         Task2();
         Task3();
         Task4();
@@ -15,7 +15,8 @@ internal class Program
         Console.Write("Input integer number a: ");
         int a = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine($"Number {a} in a cube: {Task5(a)}");
-
+        Console.WriteLine();
+        */
         Task6();
     }
 
@@ -28,7 +29,7 @@ internal class Program
         double radius = a / (2 * Math.Sqrt(3));
         Console.WriteLine();
         Console.WriteLine($"Side a: {a}");
-        Console.Write($"Radius: {radius}");
+        Console.WriteLine($"Radius: {radius}");
         Console.WriteLine();
     }
 
@@ -62,7 +63,8 @@ internal class Program
         else if (x < -15 || x > 0 || y < -15 || y > 0)
             Console.Write("Yes");
         else
-            Console.Write("On the edge");
+            Console.WriteLine("On the edge");
+        Console.WriteLine();
         Console.WriteLine();
     }
 
@@ -77,14 +79,14 @@ internal class Program
 
         switch (sign)
         {
-            case 'a':
+            case 'а':
                 maxSpeed = 120;
                 break;
             case 'в':
                 maxSpeed = 30;
                 break;
             case 'м':
-                maxSpeed = 120;
+                maxSpeed = 90;
                 break;
             case 'с':
                 maxSpeed = 900;
@@ -94,12 +96,12 @@ internal class Program
                 break;
             default:
                 Console.WriteLine("There is no such sign");
+                Console.WriteLine();
                 return;
         }
 
         Console.WriteLine($"Max speed on the sign {sign}: {maxSpeed}");
         Console.WriteLine();
-
     }
 
     static int Task5(int a)
